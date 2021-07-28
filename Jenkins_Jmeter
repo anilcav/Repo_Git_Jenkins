@@ -1,5 +1,4 @@
 node {
-        stage('Run Jmeter Test') {
-                   D:\Data\Jmeter\apache-jmeter-5.3\apache-jmeter-5.3\bin\jmeter -j jmeter.save.saveservice.output_format=xml -n -t D:\Data\Jmeter\JpetStore.jmx -l D:\Data\Jmeter\Results\JP.jtl -e -o D:\Data\Jmeter\Results
-            }
-        }
+  stage 'Run JMeter Test'
+  cd D:\Data\Jmeter\apache-jmeter-5.3\apache-jmeter-5.3\bin\jmeter -n -t D:\Data\Jmeter\JpetStore.jmx -l D:\Data\Jmeter\Results\JP.jtl -e -o D:\Data\Jmeter\Results
+}
