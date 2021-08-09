@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'https://github.com/anilcav/Repo_Git_Jenkins.git', credentialsId: 'your_credentials', url: 'your_git_url'
+                git branch: 'main', credentialsId: 'anilcav', url: 'https://github.com/anilcav/Repo_Git_Jenkins.git'
 
             }
         }
