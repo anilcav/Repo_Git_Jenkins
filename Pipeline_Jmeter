@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'your_branch', credentialsId: 'your_credentials', url: 'your_git_url'
+
+            }
+        }
+    }
+    stage('Run JMeter Test') {
+        steps {
+            dir('D:\Data\Jmeter') {
+                bat 'D:\Data\Jmeter\bin\jmeter -n -t JpetStore.jmx -l result.jtl'
+            }
+        }
+    }
+}
